@@ -1,0 +1,28 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+.dropdown-pos {
+    position: relative;
+    top: 0px;
+    margin-bottom: 30px;
+}
+select {
+    margin-bottom: -20px;
+    height: 35px;
+    width: 200px;
+}
+@include mobile {
+
+}
+@include mobile {
+    select {
+        width: 100%;
+    }
+}
+
+@include desktopAndUp {
+    .dropdown-pos {
+        right: 25px;
+        top: 120px;
+        margin-top: -20px;
+    }
+}

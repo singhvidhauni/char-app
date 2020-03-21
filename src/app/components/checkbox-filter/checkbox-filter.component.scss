@@ -1,0 +1,18 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+.card {
+    margin: 15px 0 40px 0;
+    width: 100%
+}
+.card-body {
+    border: 1px solid $grey;
+}
+.form-check {
+    margin-left: 2.5em;
+}
+@include mobile {
+    .card {
+        margin: 15px 0 15px 0;
+    }
+}

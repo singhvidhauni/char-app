@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="card-body">
+        <p for="">Search by Name</p>
+        <form class="form-inline my-2 my-lg-0" action="#" (submit)="onSearchTermTyped($event)">
+            <input name="search" class="form-control" type="text" placeholder="Search..." aria-label="Search" [(ngModel)]="searchTerm">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary d-none d-sm-block" type="button" id="button-addon2" (click)="onSearchTermTyped($event)"><i class="fa fa-search mr-2" aria-hidden="true"></i>Search</button>
+            </div>
+        </form>
+    </div>
+</div>

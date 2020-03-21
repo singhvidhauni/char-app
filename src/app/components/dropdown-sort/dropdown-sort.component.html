@@ -1,0 +1,13 @@
+<div class="row dropdown-pos">
+    <div class="form-group col-lg-3 col-sm-12">
+        <form [formGroup]="sortOrderForm">
+            <select formControlName="name" (change)="onOptionSelected(orderSelect.value)" #orderSelect>
+                <option value="">Sort By ID</option>
+                 <option [value]="order.id" *ngFor="let order of sortOrders" ><i class="fa fa-sort-{{order.id}}" aria-hidden="true"></i>{{order.label}}</option>
+            </select>
+            <div class="error-block" *ngIf="submitted && handleError('name', 'required')">
+            You must provide a value!
+            </div>
+        </form>
+    </div>
+</div>

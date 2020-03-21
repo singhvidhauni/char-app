@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,38 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'char-app';
+    //labels of the Species & Gender checkbox filter title
+    speciesFilterTitle:string = 'Species';
+    genderFilterTitle:string = 'Gender';
+
+    //dispatched choices from child(checkboxes) to parent(app component)
+    speciesChoicesSelected:[];
+    genderChoicesSelected:[];
+
+    //sort order selected on dropdown
+    sortOrderSelected:string
+
+    //array of the labels of the checkboxes for Species filter
+    speciesTypes = [
+        'Human',
+        'Alien',
+        'Others'
+    ];
+    //array of the labels of the checkboxes for Gender filter
+    genderTypes = [
+      'Male',
+      'Female'
+    ];
+
+    onSelectedChoices(choices:[]) {
+      this.speciesChoicesSelected = choices;
+    }
+
+    onSelectedGender(choices:[]) {
+      this.genderChoicesSelected = choices;
+    }
+
+    onSelectedSortedOrder(sortOrderSelected:string) {
+      this.sortOrderSelected = sortOrderSelected;
+    }
 }
