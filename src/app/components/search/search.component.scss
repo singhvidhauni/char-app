@@ -1,6 +1,9 @@
-.card {
-    margin:15px 0 10px 0;
-}
-.card-body {
-    padding-left:0;
+.search {
+    &.card {
+        margin:15px 0 10px 0;
+        border: none;
+    }
+    .card-body {
+        padding-left:0;
+    }
 }

@@ -1,66 +1,74 @@
 @import '../../../assets/styles/variables';
 @import '../../../assets/styles/mixins';
-
-.row {
-    background-color: $grey;
-}
-.list-group-item {
-    border-bottom: 1px solid $light-grey;
-    padding: .75rem 0.1rem;
-}
-.card {
-    margin-top: 20px;
-}
-.card, .card img {
-    border-radius: 5px;
-}
-.img-label {
-    width: 100%;
-    height: 75px;
-    position: absolute;
-    top: 205px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    opacity: 0.7;
-    background-color: $black;
-}
-.img-label h6 {
-    font-size: 1.25em;
-}
-.img-label p, .img-label h6 {
-    color: $white;
-    margin: 0 0 0 23px;
-}
-@include mobile {
-    .container-fluid {
-        padding-left: 5px;
-        padding-right: 5px;
+.char-grid {
+    &.row {
+        background-color: $grey;
     }
-    .col-6 {
-        padding: 0 5px;
+    .list-group-item {
+        border: none;
+        border-bottom: 1px solid $light-grey;
+        padding: .75rem 0.1rem;
     }
-    .card-body {
-        padding: 0 5px;
+    .card {
+        margin: 5px 0;
+        // margin-top: 20px;
+        // margin-bottom: 20px;
     }
-    .right-col {
-        text-align: right;
-        width: 55px;
-        word-break: break-all;
+    .card, .card img {
+        border-radius: 5px;
+    }
+    .img-container {
+        position: relative;
     }
     .img-label {
-        top: 97px;
+        width: 100%;
+        height: 75px;
+        position: absolute;
+        bottom: 0;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        opacity: 0.7;
+        background-color: $black;
     }
     .img-label h6 {
-        font-size: 1.1em;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        width: 130px;
-        white-space: nowrap;
+        font-size: 1.25em;
+    }
+    .img-label p, .img-label h6 {
+        color: $white;
+        margin: 0 0 0 23px;
+    }
+    @include mobile {
+        .container-fluid {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .col-6 {
+            padding: 0 5px;
+        }
+        .card-body {
+            padding: 0 5px;
+        }
+        .right-col {
+            text-align: right;
+            width: 55px;
+            word-break: break-all;
+        }
+        .img-label h6 {
+            font-size: 1.1em;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 130px;
+            white-space: nowrap;
+        }
+    }
+    @include desktopAndUp {
+        .right-col {
+            text-align: right;
+            width: 120px;
+        }
+        .card {
+            margin: 20px 0;
+        }
     }
 }
-@include desktopAndUp {
-    .right-col {
-        text-align: right;
-        width: 120px;
-    }
-}
+
